@@ -1,0 +1,126 @@
+body {
+    background-image: url('../images/shutterstock_1441438451.jpg');
+}
+
+a:hover, a:focus, a:visited {
+    text-decoration: none;
+    outline: none;
+}
+a {
+    text-decoration: none;
+    cursor: pointer;
+    color: #ffffff;
+    text-align: center;
+}
+
+.container-fixed {
+    text-align: center;
+    color: whitesmoke;
+    top: 0px;
+}
+
+.centered {
+    position: absolute;
+    width: 100%;
+    top: 30px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+}
+
+.centered2 {
+
+}
+
+.centered2 h1 {
+    color: white;
+    font-size: 45px;
+    font-family: 'Noto Serif KR', serif;
+    font-weight: 700;
+    text-shadow: 2px 2px 4px #000000;
+    width: 100%;
+    text-align: center;
+}
+
+.opacity   {
+    width: 100%;
+    /*background: linear-gradient(90deg, rgba(212, 63, 147, 0.6), #ffcc66);*/
+    background: linear-gradient(90deg, rgba(212, 63, 147, 0.6), rgba(255, 204, 102, 0.6)  );
+    padding: 10px ;
+}
+
+/*img.col-md-12 {
+    height: 975px;
+}*/
+
+form {
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 48.5%;
+    margin-left: -200px;
+    margin-top: -128px;
+    /* From https://css.glass */
+    background: rgba(211, 206, 29, 0.20);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(211, 206, 29, 0.16);
+}
+
+form h3 {
+    color: white;
+    opacity: 0.8;
+    font-size: 28px;
+}
+
+
+form a {
+    color: white;
+}
+
+form a:hover {
+    color: #fdbb5a;
+}
+
+.form-control {
+    border-radius: 16px;
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    margin-top: 10px;
+    padding: 0.8rem 0.5rem;
+    margin-left: 10px;
+    width: 95%;
+}
+
+.btn-primary, .btn-primary:hover, .btn-primary:active, .btn-primary:visited {
+    background: rgba(100, 10, 153, 0.3);
+    border: 1px solid rgba(103, 10, 153, 0.16);
+    border-radius: 16px;
+    color: #ffffff;
+    width: 50%;
+    padding: 10px;
+    margin-left: 25%;
+}
+
+.btn-primary:hover {
+    background: rgba(200, 10, 153, 0.55);
+    border-radius: 16px;
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+@media only screen and (min-width: 1024px) {
+    .centered2 h1 {
+        font-size: 60px;
+    }
+
+    form {
+        width: 500px;
+    }
+}
