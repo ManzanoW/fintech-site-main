@@ -38,8 +38,10 @@ header {
     position: relative;
 }
 
+
+/* Botao Menu Header*/
 .btnh {
-    color: #ffffff;
+    color: #000000;
     font-size: 1.4em;
     transition: .5s;
     width: 1.8em;
@@ -54,7 +56,7 @@ header {
     width: 100%;
     height: 100%;
     border-radius: 50%;
-    background: #ffffff;
+    background: #000000;
     transition: .5s;
     transform: scale(.9);
     z-index: -1;
@@ -62,13 +64,13 @@ header {
 
 .btnh:hover::before {
     transform: scale(1.1);
-    box-shadow: 0 0 15px #ffffff;
+    box-shadow: 0 0 15px #000000;
 }
 
 .btnh:hover {
-    color: #ffffff;
-    box-shadow: 0 0 5px #ffffff;
-    text-shadow: 0 0 5px #ffffff;
+    color: #000000;
+    box-shadow: 0 0 5px rgb(0, 0, 0);
+    text-shadow: 0 0 5px #000000;
 }
 
 /* Menu lateral */
@@ -168,7 +170,7 @@ section {
 }
 
 .card#cartao {
-    background: linear-gradient(#E04ECA, #D7628D);
+    color: #f5f5f5;
     float: right;
     height: 40%;
     width: 30%;
@@ -178,10 +180,46 @@ section {
     margin-top: -35%;
     margin-right: 6.5%;
     border-radius: 2em;
+    box-shadow: 14px 14px 0 -4px #FFCC66;
+}
+
+#cartao p {
+    position: relative;
+    top: 10em;
+    left: 1em;
+    font-size: 1.1em;
+    letter-spacing: .2em;
+    height: 1.5em;
+    width: 40%;
+}
+
+#cartao p b {
+    font-weight: 600;
+    letter-spacing: 0;
+}
+
+#cartao h1 {
+    position: relative;
+    top: 2.5em;
+    width: 46%;
+    font-size: 3em;
+    font-weight: 500;
+}
+
+#cartao h5 {
+    position: relative;
+    top: 6em;
+    width: 22%;
+}
+
+img {
+    position: relative;
+    width: 10%;
+    left: 28em;
+    top: 7.3em;
 }
 
 .card#transacoes {
-    background: linear-gradient(#E04ECA, #D7628D);
     float: right;
     height: 50%;
     padding: 0;
@@ -189,6 +227,21 @@ section {
     font-weight: bolder;
     margin-top: -15%;
     margin-right: 5%;
+}
+
+/* Botoes Card (receitas, despesas, investimentos) */
+.nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: rgb(168, 9, 173);
+}
+
+.nav-link {
+    color: #000;
+}
+
+.nav-link:hover {
+    transition: .5s;
+    color: var(--bs-nav-pills-link-active-color);
 }
 
 /* Div contendo botoes para cadastro */
@@ -302,15 +355,21 @@ section {
     background-size: cover;
 }
 
+
+/* Card Cartao */
 .dark .card#cartao {
     background: linear-gradient(350deg, #963a66, #4b6cb7, #182848);
+
 }
 
+/* Cards */
 .dark .card {
     background: linear-gradient(350deg, #963a66, #4b6cb7, #182848);
     float: left;
     padding: 0;
     font-weight: 500;
+    border: none;
+    color: #ffffff;
 }
 
 .dark .card-header {
@@ -320,6 +379,25 @@ section {
 .dark .card-body {
     background: linear-gradient(350deg, #963a66, #4b6cb7, #182848);
 }
+
+/* Botoes Card (receitas, despesas, investimentos) */
+.dark .nav-pills .nav-link.active,
+.nav-pills .show>.nav-link {
+    background-color: #953B68;
+    color: #000;
+    font-weight: 550;
+}
+
+.dark .nav-link {
+    color: var(--bs-nav-pills-link-active-color);
+}
+
+.dark .nav-link:hover {
+    transition: .5s;
+    color: #000;
+}
+
+/* Logo dark mode*/
 
 .dark .logo {
     background: url("../img/white-logo-topo.png") no-repeat;
@@ -346,6 +424,8 @@ section {
     background: url(../img/white-logo-topo.png);
 }
 
+
+/* Botao mudar dark/light mode */
 .dark .bi-sun {
     display: none;
 }
@@ -354,6 +434,7 @@ section {
     display: block;
 }
 
+/* Botao Menu Header */
 .dark .btnh {
     color: #ffffff;
     font-size: 1.4em;
@@ -385,4 +466,91 @@ section {
     color: #ffffff;
     box-shadow: 0 0 5px #ffffff;
     text-shadow: 0 0 5px #ffffff;
+}
+
+/* Botoes cadastro */
+.dark .container .btn {
+    width: 4em;
+    height: 4em;
+    margin-left: 4em;
+    border: none;
+    box-shadow: 3px 2px 0 4px rgb(0, 0, 0);
+}
+
+/* Texto botoes e botao receita */
+.dark .container .btn::after {
+    content: "Nova Receita";
+    color: #ffffff;
+    text-shadow: 2px 0 rgb(0, 0, 0);
+    display: block;
+    text-indent: 10px;
+    border-radius: 3px;
+    margin-left: -0.5em;
+    margin-top: 1.5em;
+}
+
+.dark .btn-outline-success {
+    background-color: rgba(213, 252, 155, 0.808);
+}
+
+/* Texto botao despesa */
+.dark .container .btn-outline-danger::after {
+    content: "Nova Despesa";
+    text-indent: 13px;
+    border-radius: 3px;
+    margin-left: -0.6em;
+}
+
+.dark .btn-outline-danger {
+    background-color: rgba(252, 155, 155, 0.801);
+}
+
+/* Texto botao investimento */
+.dark .container .btn-outline-primary::after {
+    content: "Novo Investimento";
+    text-indent: 27px;
+    margin-left: -1.5em;
+    text-align: center;
+}
+
+.dark .btn-outline-primary {
+    background-color: rgba(155, 229, 252, 0.801);
+}
+
+/* Imagem botoes */
+
+.dark .container .btn i {
+    margin: -12px;
+    font-size: 2em;
+    color: #000;
+}
+
+/* Brilho botoes */
+
+.dark .btn-outline-danger,
+.dark .btn-outline-primary,
+.dark .btn-outline-success {
+    color: #000000;
+    transition: .5s;
+}
+
+.dark .btn-outline-success:hover {
+    color: #000000;
+    box-shadow: 0 0 5px #000000;
+    text-shadow: 0 0 1px #000000;
+    background: rgba(188, 252, 93, 0.63);
+}
+
+.dark .btn-outline-danger:hover {
+    color: #000000;
+    box-shadow: 0 0 5px #000000;
+    text-shadow: 0 0 1px #000000;
+    background: rgba(250, 66, 66, 0.63);
+}
+
+.dark .btn-outline-primary:hover {
+    color: #000000;
+    box-shadow: 0 0 5px #000000;
+    text-shadow: 0 0 1px #000000;
+    background: rgba(76, 209, 250, 0.63);
 }
