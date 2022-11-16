@@ -170,7 +170,7 @@ section {
 }
 
 .card#cartao {
-    color: #f5f5f5;
+    color: #000000;
     float: right;
     height: 40%;
     width: 30%;
@@ -359,7 +359,7 @@ img {
 /* Card Cartao */
 .dark .card#cartao {
     background: linear-gradient(350deg, #963a66, #4b6cb7, #182848);
-
+    color: #f5f5f5;
 }
 
 /* Cards */
@@ -369,7 +369,7 @@ img {
     padding: 0;
     font-weight: 500;
     border: none;
-    color: #ffffff;
+    color: #f5f5f5;
 }
 
 .dark .card-header {
